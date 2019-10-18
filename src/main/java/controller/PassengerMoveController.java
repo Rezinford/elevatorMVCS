@@ -26,9 +26,8 @@ public class PassengerMoveController {
 
     public boolean searchNewDestination() {
         if (elevatorServic.getDirection() == Direction.UP | elevatorServic.getDirection() == Direction.NONE) {
-            return (searchSignalUP()) ? true : (searchSignalDown()) ? true : false;
+            return searchSignalUP()) || (searchSignalDown();
         } else {
-
             return searchSignalDown() || searchSignalUP();
 
         }
